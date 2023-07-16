@@ -4,4 +4,4 @@
     GPT 4.0 API Test Code (organization ID &amp; API Key）
     请参考PythonTestCode，将源码放到你的IDE里面进行API测试
     OPENAI官方(关于OrganizationID）documentation参考：
-    [https://platform.openai.com/docs/api-reference/authentication](https://platform.openai.com/docs/api-reference/authentication)
+   [ https://platform.openai.com/docs/api-reference/authentication](url)
