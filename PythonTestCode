@@ -1,0 +1,27 @@
+import openai
+
+openai.organization = "你的组织ID放到这个双引号里面"
+openai.api_key = "你的4.0APIkey放在双引号里面"
+
+MODEL = "gpt-4"
+# Prompt the user to enter the essay topic
+prompt = input("ask GPT-4 anything: ")
+
+chat_completion = openai.ChatCompletion.create(
+    model=MODEL,
+    messages=[{"role": "user", "content": prompt}])
+Oresponse = chat_completion
+response = chat_completion['choices'][0]['message']['content']
+
+# Remove leading/trailing whitespaces
+response = response.strip()
+
+# Split the response by newline character ('\n')
+response_lines = response.split('\n')
+
+# Remove leading whitespaces from each line and join them
+formatted_response = '\n'.join(line.strip() for line in response_lines)
+
+#下面两行print将会在Log里面打出排版后的输出，以及原始返回的数据（debug用）
+print(formatted_response)
+print(Oresponse)
